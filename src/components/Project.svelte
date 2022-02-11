@@ -1,13 +1,13 @@
 <script lang='ts'>
-    export let link;
-    export let title = "";
-    export let image = "";
-    export let description = "";
-    export let technologies = [];
-    export let code = "";
-    let hovered: Boolean = false;
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
+    export let link: string;
+    export let title: string;
+    export let image: string;
+    export let description: string;
+    export let technologies: string[] = [];
+    export let code: string;
+    let hovered: Boolean = false;
 
     const shadow = tweened(0, { duration: 500, easing: cubicOut});
 
@@ -29,10 +29,20 @@
         margin: 1rem;
         padding: 2rem;
         border-radius: .2rem;
-        background-color: rgba(194, 189, 212, 0.13);
+        background-color: rgb(236, 234, 243);
         // rgba(194, 189, 212, 0.418)
         &__title {
-            font-weight: 400;
+            font-weight: 500;
+            font-size: 1.8rem;
+            padding: 1.5rem;
+            margin: 1rem auto;
+        }
+
+        &__img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            padding: 2rem 2rem 1rem;
         }
 
         &__description {
@@ -56,6 +66,12 @@
         }
 
     }
+
+    @media (min-width: 1200px) {
+        .project {
+            
+        }
+    }
 </style>
 
 <div 
@@ -68,8 +84,10 @@
     <h2 class="project__title">
         <a href={link}>{title}</a>
     </h2>
+    <hr>
     <img class="project__img" src={image} alt="A screenshot of {title}" />
     <div class="project__description">{description}</div>
+    <hr>
     <div class="project__footer">
         <ul>
             {#each technologies as technology}

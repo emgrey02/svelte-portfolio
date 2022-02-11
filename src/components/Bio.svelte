@@ -20,9 +20,9 @@
             width: min-width;
             text-transform: uppercase;
             font-size: 4em;
-            font-weight: 400;
+            font-weight: 700;
             display: inline-block;
-            padding: 0;
+            padding-top: 0;
             margin: 0;
         }
         
@@ -43,7 +43,7 @@
     }
 
     .about {
-        background-color: rgba(97, 97, 172, 0.507);
+        background-color: rgb(236, 234, 243);
         border-radius: .2rem;
         width: auto;
         height: auto;
@@ -54,10 +54,10 @@
         color: #000;
 
         h2 {
-            text-transform: uppercase;
-            margin-top: 0;
+            text-transform: capitalize;
+            margin-top: 1rem;
             margin-bottom: .2em;
-            font-weight: 100;
+            font-weight: 300;
         }
     }
 
