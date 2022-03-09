@@ -27,10 +27,10 @@
     .project {
         text-align: center;
         margin: 1rem;
-        padding: 2rem;
+        padding: 1rem;
         border-radius: .2rem;
         background-color: rgb(236, 234, 243);
-        // rgba(194, 189, 212, 0.418)
+
         &__title {
             font-weight: 500;
             font-size: 1.8rem;
@@ -40,17 +40,20 @@
 
         &__img {
             width: 100%;
-            max-width: 400px;
-            height: auto;
-            padding: 2rem 2rem 1rem;
+            max-width: 500px;
+            border-radius: .5rem;
+            margin-block-start: 1rem;
+            border: 1px solid rgb(97, 97, 172);;
         }
 
         &__description {
             font-size: 15px;
-            padding: .5rem 1rem;
-            line-height: 1.5;
+            padding: .5rem;
+            line-height: 1.6;
             text-align: left;
-            margin-bottom: 2rem;
+            max-width: 50ch;
+            margin-inline: auto;
+            margin-block-end: 2rem;
         }
 
         &__footer {
@@ -63,13 +66,6 @@
                 text-transform: uppercase;
                 justify-content: center;
             }
-        }
-
-    }
-
-    @media (min-width: 1200px) {
-        .project {
-            
         }
     }
 </style>

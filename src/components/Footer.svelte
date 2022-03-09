@@ -65,6 +65,7 @@ import Bio from "./Bio.svelte";
         justify-content: space-around;
         align-items: center;
         width: 60%;
+        gap: 1rem;
         margin: auto;
         padding: 2rem;
 

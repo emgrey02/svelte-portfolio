@@ -28,7 +28,7 @@
         
         &__button {
             margin: 0;
-            margin-left: 1rem;
+            margin-inline-start: 1rem;
             padding: 0;
             border: none;
             background-color: inherit;
@@ -43,27 +43,52 @@
     }
 
     .about {
+        display: flex;
         background-color: rgb(236, 234, 243);
         border-radius: .2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
         width: auto;
         height: auto;
         text-align: left;
-        display: block;
         margin: auto;
-        padding: 1rem 2rem;
-        color: #000;
 
         h2 {
             text-transform: capitalize;
-            margin-top: 1rem;
-            margin-bottom: .2em;
-            font-weight: 300;
+            text-align: center;
+            font-weight: 300;  
+            padding: 2rem;
+            margin: 0;
+            width: 100%;
+            background-color:rgb(97, 97, 172);
+            color: white;
+        }
+
+        &__intro {
+            width: auto;
+            padding: 0 2rem;
+            max-width: 50ch;
+            line-height: 1.5;
         }
     }
 
     @media (min-width: 600px) {
         .about {
-            width: 500px;
+            width: 600px;
+            flex-direction: row;
+            
+
+            &__intro {
+                padding: 0;
+                margin: 0;
+                margin-inline-end: 2rem;
+            }
+
+            h2 {
+                padding: 4rem;
+                margin-inline-end: 2rem;
+            }
         }
     }
 </style>
