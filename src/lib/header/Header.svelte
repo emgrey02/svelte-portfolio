@@ -19,8 +19,8 @@
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -29,7 +29,7 @@
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<a href="http://github.com/emgrey02">Github</a>
 	</div>
 </header>
 
